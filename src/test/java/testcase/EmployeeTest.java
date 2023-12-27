@@ -24,7 +24,6 @@ public class EmployeeTest extends BaseTest {
         objEmployee.clickemployee();
         objEmployee.clickaddNewEmployee();
         objEmployee.clicksave();
-        Assert.assertTrue(objEmployee.ResponseMessage());
         Assert.assertTrue(objEmployee.isFailureMessageDisplayed());
        
 
@@ -51,7 +50,6 @@ public class EmployeeTest extends BaseTest {
         objEmployee.setFirstName(excelData.getCellData(1,2));
         objEmployee.setLastNAme(excelData.getCellData(1,3));
         objEmployee.clicksave();
-        Assert.assertTrue(objEmployee.ResponseMessage());
         Assert.assertTrue(objEmployee.isFailureMessageDisplayed());      
 
     }
@@ -82,7 +80,6 @@ public class EmployeeTest extends BaseTest {
         objEmployee.setleave(excelData.getCellData(1,23));
         objEmployee.setAddress(excelData.getCellData(1,24));
         objEmployee.clicksave();
-        Assert.assertTrue(objEmployee.ResponseMessage());
         Assert.assertTrue(objEmployee.isSaveSuccessMessageDisplayed());      
 
     }

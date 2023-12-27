@@ -16,7 +16,7 @@ import Constant.constant;
 
 public class DataProviderutility {
 	
-	@DataProvider(name = "testdata")
+	@DataProvider(name ="testdata")
     public String[][] getData(Method m) throws EncryptedDocumentException, IOException {
         String excelSheetName = m.getName();
         System.out.println(excelSheetName);

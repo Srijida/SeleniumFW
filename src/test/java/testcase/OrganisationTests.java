@@ -47,7 +47,7 @@ public class OrganisationTests extends BaseTest {
         objorg.clickdept();
         objorg.setName(excelData.getCellData(1, 2));
         objorg.setcomp(excelData.getCellData(1, 3));
-        objorg.setloc(excelData.getCellData(1, 4));
+        objorg.setloc(excelData.getCellData(1,4));
         objorg.setdeptHead(excelData.getCellData(1, 5));    
         objorg.clicksave();
         Assert.assertTrue(objorg.getResponseMessage());
