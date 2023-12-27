@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import Constant.constant;
 import utilities.ElementUtility;
 
 public class OrganisationPage {
@@ -65,6 +66,20 @@ public class OrganisationPage {
 	    	 System.out.println(response_message.getText());
 	    	    return true;
 	    	}
+	    public boolean isSaveSuccessMessageDisplayed() {
+	          
+	     	 String Text = response_message.getText();
+	     	    String successMessage =constant.SuccessMessageOrg; 
+	     	    return Text.contains(successMessage);
+	      }
+
+	      public boolean isFailureMessageDisplayed() {
+	     	 String Text = response_message.getText();
+	  	    String failureMessage = constant.FailureMessage; 
+	  	    return Text.contains(failureMessage);
+	      }
+	      
+
 
 	    }  
 	    

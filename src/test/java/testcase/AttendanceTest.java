@@ -14,7 +14,7 @@ public class AttendanceTest extends BaseTest{
 	AttendancePage objattend;
 
 	    @Test(priority=1)
-	    public void ValidateAttendanceBasedOnDate() throws InterruptedException, IOException {
+	    public void ValidateAttendanceCheckedBasedOnDate() throws InterruptedException, IOException {
 	    	ReadExcelData excelData = new ReadExcelData(constant.EXCEL_FILE_PATH, "Attendance");	           
 	    	performLogin(excelData.getCellData(1,0),excelData.getCellData(1,1));
 	    	objattend=new AttendancePage(driver);

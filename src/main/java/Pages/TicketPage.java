@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import Constant.constant;
 import utilities.ElementUtility;
 import utilities.WaitUtility;
 
@@ -60,10 +61,20 @@ public class TicketPage {
 	        	elementutility.mouseHoverAndClickonElement(save);
 	        	elementutility.clickOnElement(save);
 	        }
-	        public boolean ResponseMessage() {
-	          	 System.out.println(responseMessage.getText());
-	       		return true;
-	       		
-	       	}
+
+	        public boolean isSaveSuccessMessageDisplayed() {
+	            
+	        	 String Text = responseMessage.getText();
+	        	    String successMessage =constant.SuccessMessageTicket; 
+	        	    return Text.contains(successMessage);
+	         }
+
+	         public boolean isFailureMessageDisplayed() {
+	        	 String Text = responseMessage.getText();
+	     	    String failureMessage = constant.FailureMessage; 
+	     	    return Text.contains(failureMessage);
+	         }
+	         
+
 
 }

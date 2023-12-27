@@ -17,7 +17,7 @@ public class StaffTest extends BaseTest {
 	  StaffPage objstaff;
 	 
 	  @Test(priority=1)
-	    public void savingRolesAndPrivilagesOfStaff() throws InterruptedException, IOException {
+	    public void ValidatingRolesAndPrivilagesOfStaffIsSaved() throws InterruptedException, IOException {
 	        ReadExcelData excelData = new ReadExcelData(constant.EXCEL_FILE_PATH,"Staff");
 	       
 	        performLogin(excelData.getCellData(1,0),excelData.getCellData(1,1));
@@ -29,7 +29,7 @@ public class StaffTest extends BaseTest {
 	        objstaff.straccess(excelData.getCellData(1,3));
 	        objstaff.clicksave();
 	        objstaff.clicksearch(excelData.getCellData(1,4));
-	        Assert.assertTrue(objstaff.getToastMessage());	        
+	        Assert.assertTrue(objstaff.isSaveSuccessMessageDisplayed());      
 	
 }
 	

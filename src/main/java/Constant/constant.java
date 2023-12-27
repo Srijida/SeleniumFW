@@ -10,4 +10,8 @@ public class constant {
 	public static final String SuccessMessage="Employee";
 	public static final String FailureMessage="field is required";
 	public static final String SuccessMessageFile="File uploaded";
+	public static final String SuccessMessageTraning="Training type added";
+	public static final String SuccessMessageTicket="Ticket created";
+	public static final String SuccessMessageStaff="User Role added";
+	public static final String SuccessMessageOrg="Department added";
 }

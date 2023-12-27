@@ -49,12 +49,7 @@ public FileManagerPage(WebDriver driver) {
       	elementutility.mouseHoverAndClickonElement(save);
       	elementutility.clickOnElement(save);
       }
-      public boolean ResponseMessage() {
-     	 System.out.println(response.getText());
- 		return true;
- 		
-
-}
+	
       public boolean isSaveSuccessMessageDisplayed() {
           
      	 String Text = response.getText();

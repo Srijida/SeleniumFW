@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import Constant.constant;
 import utilities.ElementUtility;
 
 public class TrainingPage {
@@ -44,9 +45,21 @@ public class TrainingPage {
 	        	elementutility.mouseHoverAndClickonElement(save);
 	        	elementutility.clickOnElement(save);
 	        }
-	        public boolean getToastMessage() {
+	        public boolean getResponseMessage() {
 	          	 System.out.println(responseMessage.getText());
 	          	    return true;
 	          	}
+	        public boolean isSaveSuccessMessageDisplayed() {
+	            
+	        	 String Text = responseMessage.getText();
+	        	    String successMessage =constant.SuccessMessageTraning; 
+	        	    return Text.contains(successMessage);
+	         }
+
+	         public boolean isFailureMessageDisplayed() {
+	        	 String Text = responseMessage.getText();
+	     	    String failureMessage = constant.FailureMessage; 
+	     	    return Text.contains(failureMessage);
+	         }
 	          
 }

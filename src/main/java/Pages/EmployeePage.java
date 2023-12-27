@@ -154,12 +154,7 @@ public class EmployeePage {
      public void clicksave() {
          elementutility.clickOnElement(save);
      }
-     public boolean ResponseMessage() {
-    	 System.out.println(response.getText());
-		return true;
-		
-    	   
-    	}
+
      public boolean isSaveSuccessMessageDisplayed() {
         
     	 String Text = response.getText();

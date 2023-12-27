@@ -47,6 +47,14 @@
     <artifactId>javafaker</artifactId>
     <version>1.0.2</version>
 </dependency>
+<!-- SLF4J API -->
+<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-api</artifactId>
+    <version>1.7.32</version> <!-- or the latest version -->
+</dependency>
+
+
 	
 	</dependencies>
 
@@ -59,15 +67,10 @@
     <version>3.2.3</version>
             <configuration>
                 <suiteXmlFiles>
-                    <suiteXmlFile>testngproject.xml</suiteXmlFile>
+                    <suiteXmlFile>testngTest.xml</suiteXmlFile>
                 </suiteXmlFiles>
             </configuration>
         </plugin>
-        <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>exec-maven-plugin</artifactId>
-                    <version>3.1.0</version>
-                </plugin>
     </plugins>
 </pluginManagement>
 </build>

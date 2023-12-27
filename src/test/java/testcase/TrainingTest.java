@@ -16,19 +16,19 @@ public class TrainingTest extends BaseTest {
 	TrainingPage objtaining;
 	 
 	  @Test(priority=1)
-	    public void savingTheTrainingTypeWithoutPassingAnyDataInTheFeilds() throws InterruptedException, IOException {
+	    public void ValidatingTheTrainingTypeNotSavedWithoutPassingAnyDataInTheFeilds() throws InterruptedException, IOException {
 	        ReadExcelData excelData = new ReadExcelData(constant.EXCEL_FILE_PATH,"Training");	       
 	        performLogin(excelData.getCellData(1,0),excelData.getCellData(1,1));
 	        objtaining=new TrainingPage(driver);
 	        objtaining.clicktraining();
 	        objtaining.clicktrainingType();    
 	        objtaining.clicksave();
-	        Assert.assertTrue(objtaining.getToastMessage());	        
+	        Assert.assertTrue(objtaining.isFailureMessageDisplayed());       
 	
 }
 
 	 @Test(priority=2)
-	    public void savingTrainingTestDtailsByPassingAllTheDatas() throws InterruptedException, IOException {
+	    public void ValidatingTrainingTestSavedDtailsByPassingAllTheDatas() throws InterruptedException, IOException {
 	        ReadExcelData excelData = new ReadExcelData(constant.EXCEL_FILE_PATH,"Training");
 	        performLogin(excelData.getCellData(1,0),excelData.getCellData(1,1));
 	        objtaining=new TrainingPage(driver);
@@ -36,7 +36,7 @@ public class TrainingTest extends BaseTest {
 	        objtaining.clicktrainingType();
 	        objtaining.strtraintypename(excelData.getCellData(1,2));	     
 	        objtaining.clicksave();
-	        Assert.assertTrue(objtaining.getToastMessage());	        
+	        Assert.assertTrue(objtaining.isSaveSuccessMessageDisplayed());          
 	
 }
 }

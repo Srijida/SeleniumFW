@@ -17,7 +17,7 @@ public class FileManagerTest extends BaseTest  {
 	FileManagerPage objfile;
 
 @Test()
-public void SavingDataByUploadingFile() throws IOException, AWTException, InterruptedException{
+public void ValidatingDataSavedByUploadingFile() throws IOException, AWTException, InterruptedException{
 	 ReadExcelData excelData = new ReadExcelData (constant.EXCEL_FILE_PATH, "FileUpload");
 	 performLogin(excelData.getCellData(1,0),excelData.getCellData(1,1));
     objfile = new FileManagerPage(driver);
@@ -25,7 +25,6 @@ public void SavingDataByUploadingFile() throws IOException, AWTException, Interr
     objfile.strdept(excelData.getCellData(1, 2));    
     objfile.clickfileUpload();
     objfile.clicksave();
-    Assert.assertTrue(objfile.ResponseMessage());
     Assert.assertTrue(objfile.isSaveSuccessMessageDisplayed());  
 
 }

@@ -17,7 +17,7 @@ public class EmployeeTest extends BaseTest {
     
    
     @Test(priority=3)
-    public void verifyEmployeeDetailsWithoutPassingAnyData() throws InterruptedException, IOException {
+    public void ValidatingEmployeeDetailsNotSavedWithoutPassingAnyData() throws InterruptedException, IOException {
        ReadExcelData excelData = new ReadExcelData (constant.EXCEL_FILE_PATH, "EmployeeDetails");
        performLogin(excelData.getCellData(1,0),excelData.getCellData(1,1));
     	objEmployee=new EmployeePage(driver);
@@ -29,7 +29,7 @@ public class EmployeeTest extends BaseTest {
 
     }
     @Test(priority=2)
-    public void verifyEmployeeDetailsByPAssingOnlyTheFirstName() throws InterruptedException, IOException {
+    public void ValidatingEmployeeDetailsNotSavedByPassingOnlyTheFirstName() throws InterruptedException, IOException {
         ReadExcelData excelData = new ReadExcelData(constant.EXCEL_FILE_PATH, "EmployeeDetails");
         performLogin(excelData.getCellData(1,0),excelData.getCellData(1,1));
     	objEmployee=new EmployeePage(driver);
@@ -41,7 +41,7 @@ public class EmployeeTest extends BaseTest {
     }
 
     @Test(priority=1)
-    public void verifyEmployeeDetailsByPassingFirstTwoDatas() throws InterruptedException, IOException {
+    public void ValidatingEmployeeDetailsNotSavedByPassingFirstTwoDatas() throws InterruptedException, IOException {
         ReadExcelData excelData = new ReadExcelData(constant.EXCEL_FILE_PATH, "EmployeeDetails");
         performLogin(excelData.getCellData(1,0),excelData.getCellData(1,1));
     	objEmployee=new EmployeePage(driver);
@@ -54,7 +54,7 @@ public class EmployeeTest extends BaseTest {
 
     }
     @Test(priority=4)
-    public void veriftEmployeeDetailsByPassingAllTheDatas() throws InterruptedException, IOException {
+    public void ValidatingEmployeeDetailsSavedByPassingAllTheDatas() throws InterruptedException, IOException {
         ReadExcelData excelData = new ReadExcelData(constant.EXCEL_FILE_PATH, "EmployeeDetails");
         performLogin(excelData.getCellData(1,0),excelData.getCellData(1,1));
     	objEmployee=new EmployeePage(driver);

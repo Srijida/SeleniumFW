@@ -17,7 +17,7 @@ public class OrganisationTests extends BaseTest {
 
   
     @Test(priority=1)
-    public void savingOrganisationTestWithoutPassingAnuData() throws InterruptedException, IOException {
+    public void ValidatingOrganisationTestNotSavedWithoutPassingAnuData() throws InterruptedException, IOException {
         ReadExcelData excelData = new ReadExcelData(constant.EXCEL_FILE_PATH, "OrganisationTest");
         performLogin(excelData.getCellData(1,0),excelData.getCellData(1,1));
         objorg = new OrganisationPage(driver);
@@ -27,7 +27,7 @@ public class OrganisationTests extends BaseTest {
         Assert.assertTrue(objorg.getResponseMessage());
     }
     @Test(priority=2)
-    public void savingOrganisationTestByPassingOnlyNameData() throws InterruptedException, IOException {
+    public void ValidatingOrganisationTestNotSavedByPassingOnlyNameData() throws InterruptedException, IOException {
     	ReadExcelData excelData = new ReadExcelData(constant.EXCEL_FILE_PATH, "OrganisationTest");
         performLogin(excelData.getCellData(1,0),excelData.getCellData(1,1));
         objorg = new OrganisationPage(driver);
@@ -35,11 +35,11 @@ public class OrganisationTests extends BaseTest {
         objorg.clickdept();
         objorg.setName(excelData.getCellData(1, 2)); 
         objorg.clicksave();
-        Assert.assertTrue(objorg.getResponseMessage());
+        Assert.assertTrue(objorg.isFailureMessageDisplayed());  
     }
 
     @Test(priority=3)
-    public void savingOrganisationTestByPassingAllTheDatas() throws InterruptedException, IOException {
+    public void ValidatingOrganisationTestSavedByPassingAllTheDatas() throws InterruptedException, IOException {
     	ReadExcelData excelData = new ReadExcelData(constant.EXCEL_FILE_PATH, "OrganisationTest");
         performLogin(excelData.getCellData(1,0),excelData.getCellData(1,1));
         objorg = new OrganisationPage(driver);
@@ -50,6 +50,6 @@ public class OrganisationTests extends BaseTest {
         objorg.setloc(excelData.getCellData(1,4));
         objorg.setdeptHead(excelData.getCellData(1, 5));    
         objorg.clicksave();
-        Assert.assertTrue(objorg.getResponseMessage());
+        Assert.assertTrue(objorg.isSaveSuccessMessageDisplayed());  
     }
 }

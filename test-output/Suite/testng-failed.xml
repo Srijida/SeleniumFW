@@ -8,13 +8,13 @@
     <parameter name="browser" value="chrome"/>
     <parameter name="url" value="https://hrm.qabible.in/hrms/admin"/>
     <classes>
-      <class name="testcase.OrganisationTests">
+      <class name="testcase.TicketsTest">
         <methods>
-          <include name="savingOrganisationTestByPassingAllTheDatas"/>
           <include name="takeScreenshotOnFailure"/>
           <include name="setUp"/>
+          <include name="ValidatingTicketsIssuedToStaffIsSaved"/>
         </methods>
-      </class> <!-- testcase.OrganisationTests -->
+      </class> <!-- testcase.TicketsTest -->
     </classes>
   </test> <!-- Test_Chrome(failed) -->
 </suite> <!-- Failed suite [Suite] -->
