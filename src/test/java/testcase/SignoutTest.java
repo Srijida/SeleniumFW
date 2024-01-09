@@ -17,7 +17,7 @@ public class SignoutTest extends BaseTest {
 	SignoutPage objempexist;
 	
 
-	 @Test()
+	 @Test(retryAnalyzer=retry_analyzer.RetryAnalyzer.class)
 	    public void Signout() throws InterruptedException, AWTException, IOException {
 		 ReadExcelData excelData = new ReadExcelData (constant.EXCEL_FILE_PATH, "Logout");
 	        performLogin(excelData.getCellData(1,0),excelData.getCellData(1,1));

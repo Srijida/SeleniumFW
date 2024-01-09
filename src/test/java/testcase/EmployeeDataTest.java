@@ -12,7 +12,7 @@ public class EmployeeDataTest extends BaseTest {
 	LoginPage objLogin;
 	EmployeePage objemployee;
 		 	 
-	    @Test(dataProviderClass = DataProviderutility.class, dataProvider ="testdata")
+	    @Test(dataProviderClass = DataProviderutility.class, dataProvider ="testdata",retryAnalyzer=retry_analyzer.RetryAnalyzer.class)
 	    public void EmployeeDetails(String username, String password, String firstname,String lastname,String employeeId,String day,String month,String year, String company,
 	    		String location,String department,String designation,String userName,
 	    		String email,String gender,String shift,String day1,String month1,String year1,String contact,String pasword,

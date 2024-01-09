@@ -16,7 +16,7 @@ public class EmployeeTest extends BaseTest {
          EmployeePage objEmployee;
     
    
-    @Test(priority=3)
+    @Test(priority=3,groups = {"regression"},retryAnalyzer=retry_analyzer.RetryAnalyzer.class)
     public void ValidatingEmployeeDetailsNotSavedWithoutPassingAnyData() throws InterruptedException, IOException {
        ReadExcelData excelData = new ReadExcelData (constant.EXCEL_FILE_PATH, "EmployeeDetails");
        performLogin(excelData.getCellData(1,0),excelData.getCellData(1,1));
@@ -28,7 +28,7 @@ public class EmployeeTest extends BaseTest {
        
 
     }
-    @Test(priority=2)
+    @Test(priority=2,groups = {"sanity"},retryAnalyzer=retry_analyzer.RetryAnalyzer.class)
     public void ValidatingEmployeeDetailsNotSavedByPassingOnlyTheFirstName() throws InterruptedException, IOException {
         ReadExcelData excelData = new ReadExcelData(constant.EXCEL_FILE_PATH, "EmployeeDetails");
         performLogin(excelData.getCellData(1,0),excelData.getCellData(1,1));
@@ -40,20 +40,20 @@ public class EmployeeTest extends BaseTest {
        Assert.assertTrue(objEmployee.isFailureMessageDisplayed());      
     }
 
-    @Test(priority=1)
+    @Test(priority=1,groups = {"smoke"},retryAnalyzer=retry_analyzer.RetryAnalyzer.class)
     public void ValidatingEmployeeDetailsNotSavedByPassingFirstTwoDatas() throws InterruptedException, IOException {
         ReadExcelData excelData = new ReadExcelData(constant.EXCEL_FILE_PATH, "EmployeeDetails");
-        performLogin(excelData.getCellData(1,0),excelData.getCellData(1,1));
-    	objEmployee=new EmployeePage(driver);
-        objEmployee.clickemployee();
-        objEmployee.clickaddNewEmployee();
+       performLogin(excelData.getCellData(1,0),excelData.getCellData(1,1));
+   	objEmployee=new EmployeePage(driver);
+       objEmployee.clickemployee();
+       objEmployee.clickaddNewEmployee();
         objEmployee.setFirstName(excelData.getCellData(1,2));
         objEmployee.setLastNAme(excelData.getCellData(1,3));
-        objEmployee.clicksave();
+       objEmployee.clicksave();
         Assert.assertTrue(objEmployee.isFailureMessageDisplayed());      
 
     }
-    @Test(priority=4)
+    @Test(priority=4,groups = {"regression"},retryAnalyzer=retry_analyzer.RetryAnalyzer.class)
     public void ValidatingEmployeeDetailsSavedByPassingAllTheDatas() throws InterruptedException, IOException {
         ReadExcelData excelData = new ReadExcelData(constant.EXCEL_FILE_PATH, "EmployeeDetails");
         performLogin(excelData.getCellData(1,0),excelData.getCellData(1,1));

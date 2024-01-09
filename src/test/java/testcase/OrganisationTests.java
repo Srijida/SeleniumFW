@@ -16,7 +16,7 @@ public class OrganisationTests extends BaseTest {
     OrganisationPage objorg;
 
   
-    @Test(priority=1)
+    @Test(priority=1,enabled = true,retryAnalyzer=retry_analyzer.RetryAnalyzer.class)
     public void ValidatingOrganisationTestNotSavedWithoutPassingAnuData() throws InterruptedException, IOException {
         ReadExcelData excelData = new ReadExcelData(constant.EXCEL_FILE_PATH, "OrganisationTest");
         performLogin(excelData.getCellData(1,0),excelData.getCellData(1,1));
@@ -26,7 +26,7 @@ public class OrganisationTests extends BaseTest {
         objorg.clicksave();
         Assert.assertTrue(objorg.getResponseMessage());
     }
-    @Test(priority=2)
+    @Test(priority=2,enabled = true,retryAnalyzer=retry_analyzer.RetryAnalyzer.class)
     public void ValidatingOrganisationTestNotSavedByPassingOnlyNameData() throws InterruptedException, IOException {
     	ReadExcelData excelData = new ReadExcelData(constant.EXCEL_FILE_PATH, "OrganisationTest");
         performLogin(excelData.getCellData(1,0),excelData.getCellData(1,1));
@@ -38,7 +38,7 @@ public class OrganisationTests extends BaseTest {
         Assert.assertTrue(objorg.isFailureMessageDisplayed());  
     }
 
-    @Test(priority=3)
+    @Test(priority=3,enabled = true,retryAnalyzer=retry_analyzer.RetryAnalyzer.class)
     public void ValidatingOrganisationTestSavedByPassingAllTheDatas() throws InterruptedException, IOException {
     	ReadExcelData excelData = new ReadExcelData(constant.EXCEL_FILE_PATH, "OrganisationTest");
         performLogin(excelData.getCellData(1,0),excelData.getCellData(1,1));

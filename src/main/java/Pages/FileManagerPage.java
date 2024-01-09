@@ -10,7 +10,8 @@ import org.openqa.selenium.support.PageFactory;
 import Constant.constant;
 import utilities.ElementUtility;
 
-public class FileManagerPage {  WebDriver driver;
+public class FileManagerPage {  
+WebDriver driver;
 ElementUtility elementutility;
 
 

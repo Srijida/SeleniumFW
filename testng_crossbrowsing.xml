@@ -8,14 +8,14 @@
         <parameter name="browser" value="chrome" />
         <parameter name="url" value="https://hrm.qabible.in/hrms/admin" />
     <classes>
-      <class name="testcase.LoginTests"/>
+      <class name="testcase.StaffTest"/>
     </classes>
   </test> 
   <test name="Test_Edge">
         <parameter name="browser" value="edge" />
         <parameter name="url" value="https://hrm.qabible.in/hrms/admin" />
     <classes>
-      <class name="testcase.LoginTests"/>
+      <class name="testcase.StaffTest"/>
     </classes>
   </test><!-- Test -->
 </suite> <!-- Suite -->

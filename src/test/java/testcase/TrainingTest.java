@@ -15,7 +15,7 @@ public class TrainingTest extends BaseTest {
 	LoginPage objLogin;
 	TrainingPage objtaining;
 	 
-	  @Test(priority=1)
+	  @Test(priority=1,retryAnalyzer=retry_analyzer.RetryAnalyzer.class)
 	    public void ValidatingTheTrainingTypeNotSavedWithoutPassingAnyDataInTheFeilds() throws InterruptedException, IOException {
 	        ReadExcelData excelData = new ReadExcelData(constant.EXCEL_FILE_PATH,"Training");	       
 	        performLogin(excelData.getCellData(1,0),excelData.getCellData(1,1));
@@ -27,7 +27,7 @@ public class TrainingTest extends BaseTest {
 	
 }
 
-	 @Test(priority=2)
+	 @Test(priority=2,retryAnalyzer=retry_analyzer.RetryAnalyzer.class)
 	    public void ValidatingTrainingTestSavedDtailsByPassingAllTheDatas() throws InterruptedException, IOException {
 	        ReadExcelData excelData = new ReadExcelData(constant.EXCEL_FILE_PATH,"Training");
 	        performLogin(excelData.getCellData(1,0),excelData.getCellData(1,1));

@@ -16,7 +16,7 @@ public class FileManagerTest extends BaseTest  {
 	LoginPage objLogin;
 	FileManagerPage objfile;
 
-@Test()
+@Test(retryAnalyzer=retry_analyzer.RetryAnalyzer.class)
 public void ValidatingDataSavedByUploadingFile() throws IOException, AWTException, InterruptedException{
 	 ReadExcelData excelData = new ReadExcelData (constant.EXCEL_FILE_PATH, "FileUpload");
 	 performLogin(excelData.getCellData(1,0),excelData.getCellData(1,1));

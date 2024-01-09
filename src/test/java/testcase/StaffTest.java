@@ -16,7 +16,7 @@ public class StaffTest extends BaseTest {
 	  LoginPage objLogin;
 	  StaffPage objstaff;
 	 
-	  @Test(priority=1)
+	  @Test(priority=1,retryAnalyzer=retry_analyzer.RetryAnalyzer.class)
 	    public void ValidatingRolesAndPrivilagesOfStaffIsSaved() throws InterruptedException, IOException {
 	        ReadExcelData excelData = new ReadExcelData(constant.EXCEL_FILE_PATH,"Staff");
 	       

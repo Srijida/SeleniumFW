@@ -14,4 +14,5 @@ public class constant {
 	public static final String SuccessMessageTicket="Ticket created";
 	public static final String SuccessMessageStaff="User Role added";
 	public static final String SuccessMessageOrg="Department added";
+	public static final String SuccessMessageGoal="Goal added";
 }

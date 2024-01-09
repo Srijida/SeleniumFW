@@ -16,6 +16,7 @@
       <class name="testcase.AssetTests"/>
       <class name="testcase.EmployeeTest"/>
       <class name="testcase.FileManagerTest"/>
+      <class name="testcase.GoalTrackingTest"/>
       <class name="testcase.LoginTests"/>
       <class name="testcase.BaseTest"/>
       <class name="testcase.OrganisationTests"/>

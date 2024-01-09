@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="13" passed="13" failed="0" skipped="0">
+<testng-results retried="2" ignored="0" total="26" passed="24" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-27T22:55:50 IST" name="Suite" finished-at="2023-12-27T22:58:00 IST" duration-ms="130385">
+  <suite started-at="2024-01-09T21:36:48 IST" name="Suite" finished-at="2024-01-09T21:41:49 IST" duration-ms="301394">
     <groups>
+      <group name="regression">
+        <method signature="EmployeeTest.ValidatingEmployeeDetailsNotSavedWithoutPassingAnyData()[pri:3, instance:testcase.EmployeeTest@130e116b]" name="ValidatingEmployeeDetailsNotSavedWithoutPassingAnyData" class="testcase.EmployeeTest"/>
+        <method signature="EmployeeTest.ValidatingEmployeeDetailsSavedByPassingAllTheDatas()[pri:4, instance:testcase.EmployeeTest@130e116b]" name="ValidatingEmployeeDetailsSavedByPassingAllTheDatas" class="testcase.EmployeeTest"/>
+      </group> <!-- regression -->
+      <group name="smoke">
+        <method signature="EmployeeTest.ValidatingEmployeeDetailsNotSavedByPassingFirstTwoDatas()[pri:1, instance:testcase.EmployeeTest@130e116b]" name="ValidatingEmployeeDetailsNotSavedByPassingFirstTwoDatas" class="testcase.EmployeeTest"/>
+      </group> <!-- smoke -->
+      <group name="sanity">
+        <method signature="EmployeeTest.ValidatingEmployeeDetailsNotSavedByPassingOnlyTheFirstName()[pri:2, instance:testcase.EmployeeTest@130e116b]" name="ValidatingEmployeeDetailsNotSavedByPassingOnlyTheFirstName" class="testcase.EmployeeTest"/>
+      </group> <!-- sanity -->
     </groups>
-    <test started-at="2023-12-27T22:55:50 IST" name="Test_Chrome" finished-at="2023-12-27T22:58:00 IST" duration-ms="130385">
-      <class name="testcase.FileManagerTest">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testcase.FileManagerTest@2f67b837]" started-at="2023-12-27T22:57:11 IST" name="setUp" finished-at="2023-12-27T22:57:15 IST" duration-ms="3788" status="PASS">
+    <test started-at="2024-01-09T21:36:48 IST" name="Test_Chrome" finished-at="2024-01-09T21:41:49 IST" duration-ms="301394">
+      <class name="testcase.TicketsTest">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testcase.TicketsTest@512baff6]" started-at="2024-01-09T21:37:12 IST" name="setUp" finished-at="2024-01-09T21:37:15 IST" duration-ms="3174" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,15 +33,299 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="ValidatingDataSavedByUploadingFile()[pri:0, instance:testcase.FileManagerTest@2f67b837]" started-at="2023-12-27T22:57:15 IST" name="ValidatingDataSavedByUploadingFile" finished-at="2023-12-27T22:57:41 IST" duration-ms="26200" status="PASS">
+        <test-method retried="true" signature="ValidatingTicketsIssuedToStaffIsSaved()[pri:1, instance:testcase.TicketsTest@512baff6]" started-at="2024-01-09T21:37:15 IST" name="ValidatingTicketsIssuedToStaffIsSaved" finished-at="2024-01-09T21:37:21 IST" duration-ms="6064" status="SKIP">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[stale element reference: stale element not found
+  (Session info: chrome=120.0.6099.200)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [052b48ac9070a8116f6ddc7562fa525f, getElementTagName {id=69F015193B0BC21E564517A343756E82_element_106}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.200, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\USER\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55375}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55375/devtoo..., se:cdpVersion: 120.0.6099.200, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (052b48ac9070a8116f6ddc7562fa525f)] -> xpath: //select[@name='employee_id']]
+Session ID: 052b48ac9070a8116f6ddc7562fa525f]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=120.0.6099.200)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [052b48ac9070a8116f6ddc7562fa525f, getElementTagName {id=69F015193B0BC21E564517A343756E82_element_106}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.200, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\USER\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55375}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55375/devtoo..., se:cdpVersion: 120.0.6099.200, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (052b48ac9070a8116f6ddc7562fa525f)] -> xpath: //select[@name='employee_id']]
+Session ID: 052b48ac9070a8116f6ddc7562fa525f
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+at org.openqa.selenium.remote.RemoteWebElement.getTagName(RemoteWebElement.java:135)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy19.getTagName(Unknown Source)
+at org.openqa.selenium.support.ui.Select.<init>(Select.java:43)
+at utilities.ElementUtility.selectDrpdown(ElementUtility.java:64)
+at Pages.TicketPage.stremp_ticket(TicketPage.java:54)
+at testcase.TicketsTest.ValidatingTicketsIssuedToStaffIsSaved(TicketsTest.java:27)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidatingDataSavedByUploadingFile -->
-        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.FileManagerTest@2f67b837]" started-at="2023-12-27T22:57:41 IST" name="takeScreenshotOnFailure" finished-at="2023-12-27T22:57:42 IST" duration-ms="190" status="PASS">
+        </test-method> <!-- ValidatingTicketsIssuedToStaffIsSaved -->
+        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.TicketsTest@512baff6]" started-at="2024-01-09T21:37:21 IST" name="takeScreenshotOnFailure" finished-at="2024-01-09T21:37:21 IST" duration-ms="193" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ValidatingDataSavedByUploadingFile status=SUCCESS method=FileManagerTest.ValidatingDataSavedByUploadingFile()[pri:0, instance:testcase.FileManagerTest@2f67b837] output={null}]]]>
+                <![CDATA[[TestResult name=ValidatingTicketsIssuedToStaffIsSaved status=SKIP method=TicketsTest.ValidatingTicketsIssuedToStaffIsSaved()[pri:1, instance:testcase.TicketsTest@512baff6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshotOnFailure -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testcase.TicketsTest@512baff6]" started-at="2024-01-09T21:37:21 IST" name="setUp" finished-at="2024-01-09T21:37:25 IST" duration-ms="3520" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://hrm.qabible.in/hrms/admin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method retried="true" signature="ValidatingTicketsIssuedToStaffIsSaved()[pri:1, instance:testcase.TicketsTest@512baff6]" started-at="2024-01-09T21:37:25 IST" name="ValidatingTicketsIssuedToStaffIsSaved" finished-at="2024-01-09T21:37:31 IST" duration-ms="5879" status="SKIP">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[stale element reference: stale element not found
+  (Session info: chrome=120.0.6099.200)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [18adebc75353fd72989fa79676dffdb3, getElementTagName {id=D90014970A3FF114563E7809B9CB9183_element_108}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.200, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\USER\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55402}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55402/devtoo..., se:cdpVersion: 120.0.6099.200, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (18adebc75353fd72989fa79676dffdb3)] -> xpath: //select[@name='employee_id']]
+Session ID: 18adebc75353fd72989fa79676dffdb3]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=120.0.6099.200)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [18adebc75353fd72989fa79676dffdb3, getElementTagName {id=D90014970A3FF114563E7809B9CB9183_element_108}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.200, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\USER\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55402}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55402/devtoo..., se:cdpVersion: 120.0.6099.200, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (18adebc75353fd72989fa79676dffdb3)] -> xpath: //select[@name='employee_id']]
+Session ID: 18adebc75353fd72989fa79676dffdb3
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+at org.openqa.selenium.remote.RemoteWebElement.getTagName(RemoteWebElement.java:135)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy19.getTagName(Unknown Source)
+at org.openqa.selenium.support.ui.Select.<init>(Select.java:43)
+at utilities.ElementUtility.selectDrpdown(ElementUtility.java:64)
+at Pages.TicketPage.stremp_ticket(TicketPage.java:54)
+at testcase.TicketsTest.ValidatingTicketsIssuedToStaffIsSaved(TicketsTest.java:27)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidatingTicketsIssuedToStaffIsSaved -->
+        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.TicketsTest@512baff6]" started-at="2024-01-09T21:37:31 IST" name="takeScreenshotOnFailure" finished-at="2024-01-09T21:37:31 IST" duration-ms="181" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ValidatingTicketsIssuedToStaffIsSaved status=SKIP method=TicketsTest.ValidatingTicketsIssuedToStaffIsSaved()[pri:1, instance:testcase.TicketsTest@512baff6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshotOnFailure -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testcase.TicketsTest@512baff6]" started-at="2024-01-09T21:37:31 IST" name="setUp" finished-at="2024-01-09T21:37:34 IST" duration-ms="3113" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://hrm.qabible.in/hrms/admin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="ValidatingTicketsIssuedToStaffIsSaved()[pri:1, instance:testcase.TicketsTest@512baff6]" started-at="2024-01-09T21:37:34 IST" name="ValidatingTicketsIssuedToStaffIsSaved" finished-at="2024-01-09T21:37:43 IST" duration-ms="8872" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidatingTicketsIssuedToStaffIsSaved -->
+        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.TicketsTest@512baff6]" started-at="2024-01-09T21:37:43 IST" name="takeScreenshotOnFailure" finished-at="2024-01-09T21:37:43 IST" duration-ms="230" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ValidatingTicketsIssuedToStaffIsSaved status=SUCCESS method=TicketsTest.ValidatingTicketsIssuedToStaffIsSaved()[pri:1, instance:testcase.TicketsTest@512baff6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshotOnFailure -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testcase.TicketsTest@512baff6]" started-at="2024-01-09T21:37:43 IST" name="setUp" finished-at="2024-01-09T21:37:46 IST" duration-ms="2735" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://hrm.qabible.in/hrms/admin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="ValidatingTicketsTestNotSavedWithoutPassingAnyData()[pri:2, instance:testcase.TicketsTest@512baff6]" started-at="2024-01-09T21:37:46 IST" name="ValidatingTicketsTestNotSavedWithoutPassingAnyData" finished-at="2024-01-09T21:37:52 IST" duration-ms="6486" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidatingTicketsTestNotSavedWithoutPassingAnyData -->
+        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.TicketsTest@512baff6]" started-at="2024-01-09T21:37:52 IST" name="takeScreenshotOnFailure" finished-at="2024-01-09T21:37:52 IST" duration-ms="196" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ValidatingTicketsTestNotSavedWithoutPassingAnyData status=SUCCESS method=TicketsTest.ValidatingTicketsTestNotSavedWithoutPassingAnyData()[pri:2, instance:testcase.TicketsTest@512baff6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshotOnFailure -->
+      </class> <!-- testcase.TicketsTest -->
+      <class name="testcase.FileManagerTest">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testcase.FileManagerTest@e383572]" started-at="2024-01-09T21:39:36 IST" name="setUp" finished-at="2024-01-09T21:39:39 IST" duration-ms="3338" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://hrm.qabible.in/hrms/admin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="ValidatingDataSavedByUploadingFile()[pri:0, instance:testcase.FileManagerTest@e383572]" started-at="2024-01-09T21:39:39 IST" name="ValidatingDataSavedByUploadingFile" finished-at="2024-01-09T21:40:07 IST" duration-ms="27785" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidatingDataSavedByUploadingFile -->
+        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.FileManagerTest@e383572]" started-at="2024-01-09T21:40:07 IST" name="takeScreenshotOnFailure" finished-at="2024-01-09T21:40:07 IST" duration-ms="210" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ValidatingDataSavedByUploadingFile status=SUCCESS method=FileManagerTest.ValidatingDataSavedByUploadingFile()[pri:0, instance:testcase.FileManagerTest@e383572] output={null}]]]>
               </value>
             </param>
           </params>
@@ -39,8 +333,8 @@
           </reporter-output>
         </test-method> <!-- takeScreenshotOnFailure -->
       </class> <!-- testcase.FileManagerTest -->
-      <class name="testcase.AttendanceTest">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testcase.AttendanceTest@74589991]" started-at="2023-12-27T22:56:22 IST" name="setUp" finished-at="2023-12-27T22:56:25 IST" duration-ms="2905" status="PASS">
+      <class name="testcase.AssetTests">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testcase.AssetTests@1800a575]" started-at="2024-01-09T21:38:20 IST" name="setUp" finished-at="2024-01-09T21:38:23 IST" duration-ms="2730" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -56,15 +350,48 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="ValidateAttendanceCheckedBasedOnDate()[pri:1, instance:testcase.AttendanceTest@74589991]" started-at="2023-12-27T22:56:25 IST" name="ValidateAttendanceCheckedBasedOnDate" finished-at="2023-12-27T22:56:31 IST" duration-ms="6812" status="PASS">
+        <test-method signature="ValidateAssetIsNotAdded()[pri:0, instance:testcase.AssetTests@1800a575]" started-at="2024-01-09T21:38:23 IST" name="ValidateAssetIsNotAdded" finished-at="2024-01-09T21:38:52 IST" duration-ms="29309" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidateAttendanceCheckedBasedOnDate -->
-        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.AttendanceTest@74589991]" started-at="2023-12-27T22:56:31 IST" name="takeScreenshotOnFailure" finished-at="2023-12-27T22:56:32 IST" duration-ms="297" status="PASS">
+        </test-method> <!-- ValidateAssetIsNotAdded -->
+        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.AssetTests@1800a575]" started-at="2024-01-09T21:38:52 IST" name="takeScreenshotOnFailure" finished-at="2024-01-09T21:38:53 IST" duration-ms="218" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ValidateAttendanceCheckedBasedOnDate status=SUCCESS method=AttendanceTest.ValidateAttendanceCheckedBasedOnDate()[pri:1, instance:testcase.AttendanceTest@74589991] output={null}]]]>
+                <![CDATA[[TestResult name=ValidateAssetIsNotAdded status=SUCCESS method=AssetTests.ValidateAssetIsNotAdded()[pri:0, instance:testcase.AssetTests@1800a575] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshotOnFailure -->
+      </class> <!-- testcase.AssetTests -->
+      <class name="testcase.AttendanceTest">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testcase.AttendanceTest@1c93f6e1]" started-at="2024-01-09T21:38:10 IST" name="setUp" finished-at="2024-01-09T21:38:12 IST" duration-ms="2605" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://hrm.qabible.in/hrms/admin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="ValidateAttendanceCheckedBasedOnDate()[pri:1, instance:testcase.AttendanceTest@1c93f6e1]" started-at="2024-01-09T21:38:12 IST" name="ValidateAttendanceCheckedBasedOnDate" finished-at="2024-01-09T21:38:20 IST" duration-ms="7833" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateAttendanceCheckedBasedOnDate -->
+        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.AttendanceTest@1c93f6e1]" started-at="2024-01-09T21:38:20 IST" name="takeScreenshotOnFailure" finished-at="2024-01-09T21:38:20 IST" duration-ms="186" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ValidateAttendanceCheckedBasedOnDate status=SUCCESS method=AttendanceTest.ValidateAttendanceCheckedBasedOnDate()[pri:1, instance:testcase.AttendanceTest@1c93f6e1] output={null}]]]>
               </value>
             </param>
           </params>
@@ -72,8 +399,8 @@
           </reporter-output>
         </test-method> <!-- takeScreenshotOnFailure -->
       </class> <!-- testcase.AttendanceTest -->
-      <class name="testcase.LoginTests">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testcase.LoginTests@1869fbd2]" started-at="2023-12-27T22:57:42 IST" name="setUp" finished-at="2023-12-27T22:57:45 IST" duration-ms="3584" status="PASS">
+      <class name="testcase.TrainingTest">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testcase.TrainingTest@632ceb35]" started-at="2024-01-09T21:37:52 IST" name="setUp" finished-at="2024-01-09T21:37:55 IST" duration-ms="2557" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -89,22 +416,247 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="Valid_LoginTest()[pri:1, instance:testcase.LoginTests@1869fbd2]" started-at="2023-12-27T22:57:45 IST" name="Valid_LoginTest" finished-at="2023-12-27T22:57:49 IST" duration-ms="4006" status="PASS">
+        <test-method signature="ValidatingTheTrainingTypeNotSavedWithoutPassingAnyDataInTheFeilds()[pri:1, instance:testcase.TrainingTest@632ceb35]" started-at="2024-01-09T21:37:55 IST" name="ValidatingTheTrainingTypeNotSavedWithoutPassingAnyDataInTheFeilds" finished-at="2024-01-09T21:37:59 IST" duration-ms="4431" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidatingTheTrainingTypeNotSavedWithoutPassingAnyDataInTheFeilds -->
+        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.TrainingTest@632ceb35]" started-at="2024-01-09T21:37:59 IST" name="takeScreenshotOnFailure" finished-at="2024-01-09T21:37:59 IST" duration-ms="179" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ValidatingTheTrainingTypeNotSavedWithoutPassingAnyDataInTheFeilds status=SUCCESS method=TrainingTest.ValidatingTheTrainingTypeNotSavedWithoutPassingAnyDataInTheFeilds()[pri:1, instance:testcase.TrainingTest@632ceb35] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshotOnFailure -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testcase.TrainingTest@632ceb35]" started-at="2024-01-09T21:37:59 IST" name="setUp" finished-at="2024-01-09T21:38:03 IST" duration-ms="3368" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://hrm.qabible.in/hrms/admin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="ValidatingTrainingTestSavedDtailsByPassingAllTheDatas()[pri:2, instance:testcase.TrainingTest@632ceb35]" started-at="2024-01-09T21:38:03 IST" name="ValidatingTrainingTestSavedDtailsByPassingAllTheDatas" finished-at="2024-01-09T21:38:10 IST" duration-ms="6725" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidatingTrainingTestSavedDtailsByPassingAllTheDatas -->
+        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.TrainingTest@632ceb35]" started-at="2024-01-09T21:38:10 IST" name="takeScreenshotOnFailure" finished-at="2024-01-09T21:38:10 IST" duration-ms="225" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ValidatingTrainingTestSavedDtailsByPassingAllTheDatas status=SUCCESS method=TrainingTest.ValidatingTrainingTestSavedDtailsByPassingAllTheDatas()[pri:2, instance:testcase.TrainingTest@632ceb35] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshotOnFailure -->
+      </class> <!-- testcase.TrainingTest -->
+      <class name="testcase.GoalTrackingTest">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testcase.GoalTrackingTest@5ddf0d24]" started-at="2024-01-09T21:40:07 IST" name="setUp" finished-at="2024-01-09T21:40:11 IST" duration-ms="3039" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://hrm.qabible.in/hrms/admin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="ValidatingGoalTrackingNotAddedByNotPassingAnyTestData()[pri:1, instance:testcase.GoalTrackingTest@5ddf0d24]" started-at="2024-01-09T21:40:11 IST" name="ValidatingGoalTrackingNotAddedByNotPassingAnyTestData" finished-at="2024-01-09T21:40:19 IST" duration-ms="8067" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidatingGoalTrackingNotAddedByNotPassingAnyTestData -->
+        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.GoalTrackingTest@5ddf0d24]" started-at="2024-01-09T21:40:19 IST" name="takeScreenshotOnFailure" finished-at="2024-01-09T21:40:19 IST" duration-ms="213" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ValidatingGoalTrackingNotAddedByNotPassingAnyTestData status=SUCCESS method=GoalTrackingTest.ValidatingGoalTrackingNotAddedByNotPassingAnyTestData()[pri:1, instance:testcase.GoalTrackingTest@5ddf0d24] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshotOnFailure -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testcase.GoalTrackingTest@5ddf0d24]" started-at="2024-01-09T21:40:19 IST" name="setUp" finished-at="2024-01-09T21:40:22 IST" duration-ms="3357" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://hrm.qabible.in/hrms/admin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="ValidatingGoalTrackingAddedByPassingAllTheTestData()[pri:2, instance:testcase.GoalTrackingTest@5ddf0d24]" started-at="2024-01-09T21:40:22 IST" name="ValidatingGoalTrackingAddedByPassingAllTheTestData" finished-at="2024-01-09T21:40:32 IST" duration-ms="9673" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidatingGoalTrackingAddedByPassingAllTheTestData -->
+        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.GoalTrackingTest@5ddf0d24]" started-at="2024-01-09T21:40:32 IST" name="takeScreenshotOnFailure" finished-at="2024-01-09T21:40:32 IST" duration-ms="198" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ValidatingGoalTrackingAddedByPassingAllTheTestData status=SUCCESS method=GoalTrackingTest.ValidatingGoalTrackingAddedByPassingAllTheTestData()[pri:2, instance:testcase.GoalTrackingTest@5ddf0d24] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshotOnFailure -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testcase.GoalTrackingTest@5ddf0d24]" started-at="2024-01-09T21:40:32 IST" name="setUp" finished-at="2024-01-09T21:40:35 IST" duration-ms="3194" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://hrm.qabible.in/hrms/admin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="ValidatingGoalTrackingNotAddedByNotPassingOnlyOneTestData()[pri:3, instance:testcase.GoalTrackingTest@5ddf0d24]" started-at="2024-01-09T21:40:35 IST" name="ValidatingGoalTrackingNotAddedByNotPassingOnlyOneTestData" finished-at="2024-01-09T21:40:42 IST" duration-ms="6701" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidatingGoalTrackingNotAddedByNotPassingOnlyOneTestData -->
+        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.GoalTrackingTest@5ddf0d24]" started-at="2024-01-09T21:40:42 IST" name="takeScreenshotOnFailure" finished-at="2024-01-09T21:40:42 IST" duration-ms="183" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ValidatingGoalTrackingNotAddedByNotPassingOnlyOneTestData status=SUCCESS method=GoalTrackingTest.ValidatingGoalTrackingNotAddedByNotPassingOnlyOneTestData()[pri:3, instance:testcase.GoalTrackingTest@5ddf0d24] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshotOnFailure -->
+      </class> <!-- testcase.GoalTrackingTest -->
+      <class name="testcase.StaffTest">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testcase.StaffTest@38b27cdc]" started-at="2024-01-09T21:36:48 IST" name="setUp" finished-at="2024-01-09T21:36:53 IST" duration-ms="5425" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://hrm.qabible.in/hrms/admin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="ValidatingRolesAndPrivilagesOfStaffIsSaved()[pri:1, instance:testcase.StaffTest@38b27cdc]" started-at="2024-01-09T21:36:53 IST" name="ValidatingRolesAndPrivilagesOfStaffIsSaved" finished-at="2024-01-09T21:37:03 IST" duration-ms="9262" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidatingRolesAndPrivilagesOfStaffIsSaved -->
+        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.StaffTest@38b27cdc]" started-at="2024-01-09T21:37:03 IST" name="takeScreenshotOnFailure" finished-at="2024-01-09T21:37:03 IST" duration-ms="218" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ValidatingRolesAndPrivilagesOfStaffIsSaved status=SUCCESS method=StaffTest.ValidatingRolesAndPrivilagesOfStaffIsSaved()[pri:1, instance:testcase.StaffTest@38b27cdc] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshotOnFailure -->
+      </class> <!-- testcase.StaffTest -->
+      <class name="testcase.SignoutTest">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testcase.SignoutTest@4ae9cfc1]" started-at="2024-01-09T21:37:03 IST" name="setUp" finished-at="2024-01-09T21:37:06 IST" duration-ms="3248" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://hrm.qabible.in/hrms/admin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Signout()[pri:0, instance:testcase.SignoutTest@4ae9cfc1]" started-at="2024-01-09T21:37:06 IST" name="Signout" finished-at="2024-01-09T21:37:11 IST" duration-ms="5435" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Signout -->
+        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.SignoutTest@4ae9cfc1]" started-at="2024-01-09T21:37:11 IST" name="takeScreenshotOnFailure" finished-at="2024-01-09T21:37:12 IST" duration-ms="187" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Signout status=SUCCESS method=SignoutTest.Signout()[pri:0, instance:testcase.SignoutTest@4ae9cfc1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshotOnFailure -->
+      </class> <!-- testcase.SignoutTest -->
+      <class name="testcase.LoginTests">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testcase.LoginTests@363a52f]" started-at="2024-01-09T21:40:42 IST" name="setUp" finished-at="2024-01-09T21:40:46 IST" duration-ms="3424" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://hrm.qabible.in/hrms/admin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Valid_LoginTest()[pri:1, instance:testcase.LoginTests@363a52f]" started-at="2024-01-09T21:40:46 IST" name="Valid_LoginTest" finished-at="2024-01-09T21:40:51 IST" duration-ms="5609" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Valid_LoginTest -->
-        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.LoginTests@1869fbd2]" started-at="2023-12-27T22:57:49 IST" name="takeScreenshotOnFailure" finished-at="2023-12-27T22:57:49 IST" duration-ms="192" status="PASS">
+        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.LoginTests@363a52f]" started-at="2024-01-09T21:40:51 IST" name="takeScreenshotOnFailure" finished-at="2024-01-09T21:40:51 IST" duration-ms="174" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Valid_LoginTest status=SUCCESS method=LoginTests.Valid_LoginTest()[pri:1, instance:testcase.LoginTests@1869fbd2] output={null}]]]>
+                <![CDATA[[TestResult name=Valid_LoginTest status=SUCCESS method=LoginTests.Valid_LoginTest()[pri:1, instance:testcase.LoginTests@363a52f] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshotOnFailure -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testcase.LoginTests@1869fbd2]" started-at="2023-12-27T22:57:49 IST" name="setUp" finished-at="2023-12-27T22:57:52 IST" duration-ms="2875" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testcase.LoginTests@363a52f]" started-at="2024-01-09T21:40:51 IST" name="setUp" finished-at="2024-01-09T21:40:54 IST" duration-ms="2738" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -120,22 +672,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="Invalid_Username_Test()[pri:2, instance:testcase.LoginTests@1869fbd2]" started-at="2023-12-27T22:57:52 IST" name="Invalid_Username_Test" finished-at="2023-12-27T22:57:53 IST" duration-ms="585" status="PASS">
+        <test-method signature="Invalid_Username_Test()[pri:2, instance:testcase.LoginTests@363a52f]" started-at="2024-01-09T21:40:54 IST" name="Invalid_Username_Test" finished-at="2024-01-09T21:40:54 IST" duration-ms="291" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Invalid_Username_Test -->
-        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.LoginTests@1869fbd2]" started-at="2023-12-27T22:57:53 IST" name="takeScreenshotOnFailure" finished-at="2023-12-27T22:57:53 IST" duration-ms="251" status="PASS">
+        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.LoginTests@363a52f]" started-at="2024-01-09T21:40:54 IST" name="takeScreenshotOnFailure" finished-at="2024-01-09T21:40:55 IST" duration-ms="197" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Invalid_Username_Test status=SUCCESS method=LoginTests.Invalid_Username_Test()[pri:2, instance:testcase.LoginTests@1869fbd2] output={null}]]]>
+                <![CDATA[[TestResult name=Invalid_Username_Test status=SUCCESS method=LoginTests.Invalid_Username_Test()[pri:2, instance:testcase.LoginTests@363a52f] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshotOnFailure -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testcase.LoginTests@1869fbd2]" started-at="2023-12-27T22:57:53 IST" name="setUp" finished-at="2023-12-27T22:57:56 IST" duration-ms="2985" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testcase.LoginTests@363a52f]" started-at="2024-01-09T21:40:55 IST" name="setUp" finished-at="2024-01-09T21:40:57 IST" duration-ms="2625" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -151,22 +703,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="Invalid_Password_Test()[pri:3, instance:testcase.LoginTests@1869fbd2]" started-at="2023-12-27T22:57:56 IST" name="Invalid_Password_Test" finished-at="2023-12-27T22:57:56 IST" duration-ms="345" status="PASS">
+        <test-method signature="Invalid_Password_Test()[pri:3, instance:testcase.LoginTests@363a52f]" started-at="2024-01-09T21:40:57 IST" name="Invalid_Password_Test" finished-at="2024-01-09T21:40:58 IST" duration-ms="353" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Invalid_Password_Test -->
-        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.LoginTests@1869fbd2]" started-at="2023-12-27T22:57:56 IST" name="takeScreenshotOnFailure" finished-at="2023-12-27T22:57:57 IST" duration-ms="208" status="PASS">
+        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.LoginTests@363a52f]" started-at="2024-01-09T21:40:58 IST" name="takeScreenshotOnFailure" finished-at="2024-01-09T21:40:58 IST" duration-ms="175" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Invalid_Password_Test status=SUCCESS method=LoginTests.Invalid_Password_Test()[pri:3, instance:testcase.LoginTests@1869fbd2] output={null}]]]>
+                <![CDATA[[TestResult name=Invalid_Password_Test status=SUCCESS method=LoginTests.Invalid_Password_Test()[pri:3, instance:testcase.LoginTests@363a52f] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshotOnFailure -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testcase.LoginTests@1869fbd2]" started-at="2023-12-27T22:57:57 IST" name="setUp" finished-at="2023-12-27T22:58:00 IST" duration-ms="3104" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testcase.LoginTests@363a52f]" started-at="2024-01-09T21:40:58 IST" name="setUp" finished-at="2024-01-09T21:41:02 IST" duration-ms="4122" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -182,15 +734,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="Invalid_LoginTest()[pri:4, instance:testcase.LoginTests@1869fbd2]" started-at="2023-12-27T22:58:00 IST" name="Invalid_LoginTest" finished-at="2023-12-27T22:58:00 IST" duration-ms="306" status="PASS">
+        <test-method signature="Invalid_LoginTest()[pri:4, instance:testcase.LoginTests@363a52f]" started-at="2024-01-09T21:41:02 IST" name="Invalid_LoginTest" finished-at="2024-01-09T21:41:02 IST" duration-ms="436" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Invalid_LoginTest -->
-        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.LoginTests@1869fbd2]" started-at="2023-12-27T22:58:00 IST" name="takeScreenshotOnFailure" finished-at="2023-12-27T22:58:00 IST" duration-ms="191" status="PASS">
+        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.LoginTests@363a52f]" started-at="2024-01-09T21:41:02 IST" name="takeScreenshotOnFailure" finished-at="2024-01-09T21:41:03 IST" duration-ms="234" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Invalid_LoginTest status=SUCCESS method=LoginTests.Invalid_LoginTest()[pri:4, instance:testcase.LoginTests@1869fbd2] output={null}]]]>
+                <![CDATA[[TestResult name=Invalid_LoginTest status=SUCCESS method=LoginTests.Invalid_LoginTest()[pri:4, instance:testcase.LoginTests@363a52f] output={null}]]]>
               </value>
             </param>
           </params>
@@ -199,7 +751,7 @@
         </test-method> <!-- takeScreenshotOnFailure -->
       </class> <!-- testcase.LoginTests -->
       <class name="testcase.EmployeeTest">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testcase.EmployeeTest@1fc32e4f]" started-at="2023-12-27T22:56:32 IST" name="setUp" finished-at="2023-12-27T22:56:35 IST" duration-ms="3529" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testcase.EmployeeTest@130e116b]" started-at="2024-01-09T21:38:53 IST" name="setUp" finished-at="2024-01-09T21:38:55 IST" duration-ms="2784" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -215,22 +767,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="ValidatingEmployeeDetailsNotSavedByPassingFirstTwoDatas()[pri:1, instance:testcase.EmployeeTest@1fc32e4f]" started-at="2023-12-27T22:56:35 IST" name="ValidatingEmployeeDetailsNotSavedByPassingFirstTwoDatas" finished-at="2023-12-27T22:56:41 IST" duration-ms="6000" status="PASS">
+        <test-method signature="ValidatingEmployeeDetailsNotSavedByPassingFirstTwoDatas()[pri:1, instance:testcase.EmployeeTest@130e116b]" started-at="2024-01-09T21:38:55 IST" name="ValidatingEmployeeDetailsNotSavedByPassingFirstTwoDatas" finished-at="2024-01-09T21:39:03 IST" duration-ms="7664" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidatingEmployeeDetailsNotSavedByPassingFirstTwoDatas -->
-        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.EmployeeTest@1fc32e4f]" started-at="2023-12-27T22:56:41 IST" name="takeScreenshotOnFailure" finished-at="2023-12-27T22:56:41 IST" duration-ms="235" status="PASS">
+        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.EmployeeTest@130e116b]" started-at="2024-01-09T21:39:03 IST" name="takeScreenshotOnFailure" finished-at="2024-01-09T21:39:03 IST" duration-ms="214" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ValidatingEmployeeDetailsNotSavedByPassingFirstTwoDatas status=SUCCESS method=EmployeeTest.ValidatingEmployeeDetailsNotSavedByPassingFirstTwoDatas()[pri:1, instance:testcase.EmployeeTest@1fc32e4f] output={null}]]]>
+                <![CDATA[[TestResult name=ValidatingEmployeeDetailsNotSavedByPassingFirstTwoDatas status=SUCCESS method=EmployeeTest.ValidatingEmployeeDetailsNotSavedByPassingFirstTwoDatas()[pri:1, instance:testcase.EmployeeTest@130e116b] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshotOnFailure -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testcase.EmployeeTest@1fc32e4f]" started-at="2023-12-27T22:56:41 IST" name="setUp" finished-at="2023-12-27T22:56:45 IST" duration-ms="3123" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testcase.EmployeeTest@130e116b]" started-at="2024-01-09T21:39:03 IST" name="setUp" finished-at="2024-01-09T21:39:07 IST" duration-ms="3857" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -246,22 +798,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="ValidatingEmployeeDetailsNotSavedByPassingOnlyTheFirstName()[pri:2, instance:testcase.EmployeeTest@1fc32e4f]" started-at="2023-12-27T22:56:45 IST" name="ValidatingEmployeeDetailsNotSavedByPassingOnlyTheFirstName" finished-at="2023-12-27T22:56:51 IST" duration-ms="6174" status="PASS">
+        <test-method signature="ValidatingEmployeeDetailsNotSavedByPassingOnlyTheFirstName()[pri:2, instance:testcase.EmployeeTest@130e116b]" started-at="2024-01-09T21:39:07 IST" name="ValidatingEmployeeDetailsNotSavedByPassingOnlyTheFirstName" finished-at="2024-01-09T21:39:14 IST" duration-ms="6758" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidatingEmployeeDetailsNotSavedByPassingOnlyTheFirstName -->
-        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.EmployeeTest@1fc32e4f]" started-at="2023-12-27T22:56:51 IST" name="takeScreenshotOnFailure" finished-at="2023-12-27T22:56:51 IST" duration-ms="185" status="PASS">
+        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.EmployeeTest@130e116b]" started-at="2024-01-09T21:39:14 IST" name="takeScreenshotOnFailure" finished-at="2024-01-09T21:39:14 IST" duration-ms="228" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ValidatingEmployeeDetailsNotSavedByPassingOnlyTheFirstName status=SUCCESS method=EmployeeTest.ValidatingEmployeeDetailsNotSavedByPassingOnlyTheFirstName()[pri:2, instance:testcase.EmployeeTest@1fc32e4f] output={null}]]]>
+                <![CDATA[[TestResult name=ValidatingEmployeeDetailsNotSavedByPassingOnlyTheFirstName status=SUCCESS method=EmployeeTest.ValidatingEmployeeDetailsNotSavedByPassingOnlyTheFirstName()[pri:2, instance:testcase.EmployeeTest@130e116b] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshotOnFailure -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testcase.EmployeeTest@1fc32e4f]" started-at="2023-12-27T22:56:51 IST" name="setUp" finished-at="2023-12-27T22:56:54 IST" duration-ms="2863" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testcase.EmployeeTest@130e116b]" started-at="2024-01-09T21:39:14 IST" name="setUp" finished-at="2024-01-09T21:39:17 IST" duration-ms="2591" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -277,22 +829,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="ValidatingEmployeeDetailsNotSavedWithoutPassingAnyData()[pri:3, instance:testcase.EmployeeTest@1fc32e4f]" started-at="2023-12-27T22:56:54 IST" name="ValidatingEmployeeDetailsNotSavedWithoutPassingAnyData" finished-at="2023-12-27T22:57:00 IST" duration-ms="6444" status="PASS">
+        <test-method signature="ValidatingEmployeeDetailsNotSavedWithoutPassingAnyData()[pri:3, instance:testcase.EmployeeTest@130e116b]" started-at="2024-01-09T21:39:17 IST" name="ValidatingEmployeeDetailsNotSavedWithoutPassingAnyData" finished-at="2024-01-09T21:39:23 IST" duration-ms="6389" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidatingEmployeeDetailsNotSavedWithoutPassingAnyData -->
-        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.EmployeeTest@1fc32e4f]" started-at="2023-12-27T22:57:00 IST" name="takeScreenshotOnFailure" finished-at="2023-12-27T22:57:00 IST" duration-ms="209" status="PASS">
+        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.EmployeeTest@130e116b]" started-at="2024-01-09T21:39:23 IST" name="takeScreenshotOnFailure" finished-at="2024-01-09T21:39:23 IST" duration-ms="195" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ValidatingEmployeeDetailsNotSavedWithoutPassingAnyData status=SUCCESS method=EmployeeTest.ValidatingEmployeeDetailsNotSavedWithoutPassingAnyData()[pri:3, instance:testcase.EmployeeTest@1fc32e4f] output={null}]]]>
+                <![CDATA[[TestResult name=ValidatingEmployeeDetailsNotSavedWithoutPassingAnyData status=SUCCESS method=EmployeeTest.ValidatingEmployeeDetailsNotSavedWithoutPassingAnyData()[pri:3, instance:testcase.EmployeeTest@130e116b] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshotOnFailure -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testcase.EmployeeTest@1fc32e4f]" started-at="2023-12-27T22:57:00 IST" name="setUp" finished-at="2023-12-27T22:57:03 IST" duration-ms="3056" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testcase.EmployeeTest@130e116b]" started-at="2024-01-09T21:39:23 IST" name="setUp" finished-at="2024-01-09T21:39:26 IST" duration-ms="2919" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -308,15 +860,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="ValidatingEmployeeDetailsSavedByPassingAllTheDatas()[pri:4, instance:testcase.EmployeeTest@1fc32e4f]" started-at="2023-12-27T22:57:03 IST" name="ValidatingEmployeeDetailsSavedByPassingAllTheDatas" finished-at="2023-12-27T22:57:11 IST" duration-ms="7740" status="PASS">
+        <test-method signature="ValidatingEmployeeDetailsSavedByPassingAllTheDatas()[pri:4, instance:testcase.EmployeeTest@130e116b]" started-at="2024-01-09T21:39:26 IST" name="ValidatingEmployeeDetailsSavedByPassingAllTheDatas" finished-at="2024-01-09T21:39:36 IST" duration-ms="9628" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidatingEmployeeDetailsSavedByPassingAllTheDatas -->
-        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.EmployeeTest@1fc32e4f]" started-at="2023-12-27T22:57:11 IST" name="takeScreenshotOnFailure" finished-at="2023-12-27T22:57:11 IST" duration-ms="199" status="PASS">
+        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.EmployeeTest@130e116b]" started-at="2024-01-09T21:39:36 IST" name="takeScreenshotOnFailure" finished-at="2024-01-09T21:39:36 IST" duration-ms="212" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ValidatingEmployeeDetailsSavedByPassingAllTheDatas status=SUCCESS method=EmployeeTest.ValidatingEmployeeDetailsSavedByPassingAllTheDatas()[pri:4, instance:testcase.EmployeeTest@1fc32e4f] output={null}]]]>
+                <![CDATA[[TestResult name=ValidatingEmployeeDetailsSavedByPassingAllTheDatas status=SUCCESS method=EmployeeTest.ValidatingEmployeeDetailsSavedByPassingAllTheDatas()[pri:4, instance:testcase.EmployeeTest@130e116b] output={null}]]]>
               </value>
             </param>
           </params>
@@ -324,8 +876,8 @@
           </reporter-output>
         </test-method> <!-- takeScreenshotOnFailure -->
       </class> <!-- testcase.EmployeeTest -->
-      <class name="testcase.OrganisationTests">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testcase.OrganisationTests@2e48362c]" started-at="2023-12-27T22:55:50 IST" name="setUp" finished-at="2023-12-27T22:55:55 IST" duration-ms="4623" status="PASS">
+      <class name="testcase.EmployeeDataTest">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testcase.EmployeeDataTest@a4add54]" started-at="2024-01-09T21:41:35 IST" name="setUp" finished-at="2024-01-09T21:41:39 IST" duration-ms="3859" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -341,22 +893,182 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="ValidatingOrganisationTestNotSavedWithoutPassingAnuData()[pri:1, instance:testcase.OrganisationTests@2e48362c]" started-at="2023-12-27T22:55:55 IST" name="ValidatingOrganisationTestNotSavedWithoutPassingAnuData" finished-at="2023-12-27T22:56:01 IST" duration-ms="6822" status="PASS">
+        <test-method signature="EmployeeDetails(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.EmployeeDataTest@a4add54]" started-at="2024-01-09T21:41:39 IST" name="EmployeeDetails" data-provider="testdata" finished-at="2024-01-09T21:41:49 IST" duration-ms="10227" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Srijida]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Nazif]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[123465]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[12]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Jan]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[2020]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[CRROTHRM]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Chennai Branch]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[Accounts and Finances]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Developer]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[srijida]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[srin@gmail.com]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Female]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Morning Shift]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[26]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Jan]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[2000]]>
+              </value>
+            </param>
+            <param index="19">
+              <value>
+                <![CDATA[111222]]>
+              </value>
+            </param>
+            <param index="20">
+              <value>
+                <![CDATA[aabbcc]]>
+              </value>
+            </param>
+            <param index="21">
+              <value>
+                <![CDATA[aabbcc]]>
+              </value>
+            </param>
+            <param index="22">
+              <value>
+                <![CDATA[Test_MJ_02]]>
+              </value>
+            </param>
+            <param index="23">
+              <value>
+                <![CDATA[Casual Leave]]>
+              </value>
+            </param>
+            <param index="24">
+              <value>
+                <![CDATA[Trivandrum,Kerala]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EmployeeDetails -->
+        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.EmployeeDataTest@a4add54]" started-at="2024-01-09T21:41:49 IST" name="takeScreenshotOnFailure" finished-at="2024-01-09T21:41:49 IST" duration-ms="202" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=EmployeeDetails status=SUCCESS method=EmployeeDataTest.EmployeeDetails(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.EmployeeDataTest@a4add54] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshotOnFailure -->
+      </class> <!-- testcase.EmployeeDataTest -->
+      <class name="testcase.OrganisationTests">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testcase.OrganisationTests@2fd953a6]" started-at="2024-01-09T21:41:03 IST" name="setUp" finished-at="2024-01-09T21:41:05 IST" duration-ms="2662" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://hrm.qabible.in/hrms/admin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="ValidatingOrganisationTestNotSavedWithoutPassingAnuData()[pri:1, instance:testcase.OrganisationTests@2fd953a6]" started-at="2024-01-09T21:41:05 IST" name="ValidatingOrganisationTestNotSavedWithoutPassingAnuData" finished-at="2024-01-09T21:41:11 IST" duration-ms="5946" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidatingOrganisationTestNotSavedWithoutPassingAnuData -->
-        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.OrganisationTests@2e48362c]" started-at="2023-12-27T22:56:01 IST" name="takeScreenshotOnFailure" finished-at="2023-12-27T22:56:02 IST" duration-ms="225" status="PASS">
+        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.OrganisationTests@2fd953a6]" started-at="2024-01-09T21:41:11 IST" name="takeScreenshotOnFailure" finished-at="2024-01-09T21:41:11 IST" duration-ms="196" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ValidatingOrganisationTestNotSavedWithoutPassingAnuData status=SUCCESS method=OrganisationTests.ValidatingOrganisationTestNotSavedWithoutPassingAnuData()[pri:1, instance:testcase.OrganisationTests@2e48362c] output={null}]]]>
+                <![CDATA[[TestResult name=ValidatingOrganisationTestNotSavedWithoutPassingAnuData status=SUCCESS method=OrganisationTests.ValidatingOrganisationTestNotSavedWithoutPassingAnuData()[pri:1, instance:testcase.OrganisationTests@2fd953a6] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshotOnFailure -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testcase.OrganisationTests@2e48362c]" started-at="2023-12-27T22:56:02 IST" name="setUp" finished-at="2023-12-27T22:56:05 IST" duration-ms="3618" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testcase.OrganisationTests@2fd953a6]" started-at="2024-01-09T21:41:11 IST" name="setUp" finished-at="2024-01-09T21:41:15 IST" duration-ms="3844" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -372,22 +1084,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="ValidatingOrganisationTestNotSavedByPassingOnlyNameData()[pri:2, instance:testcase.OrganisationTests@2e48362c]" started-at="2023-12-27T22:56:05 IST" name="ValidatingOrganisationTestNotSavedByPassingOnlyNameData" finished-at="2023-12-27T22:56:11 IST" duration-ms="5809" status="PASS">
+        <test-method signature="ValidatingOrganisationTestNotSavedByPassingOnlyNameData()[pri:2, instance:testcase.OrganisationTests@2fd953a6]" started-at="2024-01-09T21:41:15 IST" name="ValidatingOrganisationTestNotSavedByPassingOnlyNameData" finished-at="2024-01-09T21:41:23 IST" duration-ms="8101" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidatingOrganisationTestNotSavedByPassingOnlyNameData -->
-        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.OrganisationTests@2e48362c]" started-at="2023-12-27T22:56:11 IST" name="takeScreenshotOnFailure" finished-at="2023-12-27T22:56:11 IST" duration-ms="224" status="PASS">
+        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.OrganisationTests@2fd953a6]" started-at="2024-01-09T21:41:23 IST" name="takeScreenshotOnFailure" finished-at="2024-01-09T21:41:23 IST" duration-ms="202" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ValidatingOrganisationTestNotSavedByPassingOnlyNameData status=SUCCESS method=OrganisationTests.ValidatingOrganisationTestNotSavedByPassingOnlyNameData()[pri:2, instance:testcase.OrganisationTests@2e48362c] output={null}]]]>
+                <![CDATA[[TestResult name=ValidatingOrganisationTestNotSavedByPassingOnlyNameData status=SUCCESS method=OrganisationTests.ValidatingOrganisationTestNotSavedByPassingOnlyNameData()[pri:2, instance:testcase.OrganisationTests@2fd953a6] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshotOnFailure -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testcase.OrganisationTests@2e48362c]" started-at="2023-12-27T22:56:11 IST" name="setUp" finished-at="2023-12-27T22:56:14 IST" duration-ms="3200" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:testcase.OrganisationTests@2fd953a6]" started-at="2024-01-09T21:41:23 IST" name="setUp" finished-at="2024-01-09T21:41:27 IST" duration-ms="3427" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -403,15 +1115,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="ValidatingOrganisationTestSavedByPassingAllTheDatas()[pri:3, instance:testcase.OrganisationTests@2e48362c]" started-at="2023-12-27T22:56:14 IST" name="ValidatingOrganisationTestSavedByPassingAllTheDatas" finished-at="2023-12-27T22:56:21 IST" duration-ms="6999" status="PASS">
+        <test-method signature="ValidatingOrganisationTestSavedByPassingAllTheDatas()[pri:3, instance:testcase.OrganisationTests@2fd953a6]" started-at="2024-01-09T21:41:27 IST" name="ValidatingOrganisationTestSavedByPassingAllTheDatas" finished-at="2024-01-09T21:41:35 IST" duration-ms="7786" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidatingOrganisationTestSavedByPassingAllTheDatas -->
-        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.OrganisationTests@2e48362c]" started-at="2023-12-27T22:56:21 IST" name="takeScreenshotOnFailure" finished-at="2023-12-27T22:56:22 IST" duration-ms="190" status="PASS">
+        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.OrganisationTests@2fd953a6]" started-at="2024-01-09T21:41:35 IST" name="takeScreenshotOnFailure" finished-at="2024-01-09T21:41:35 IST" duration-ms="200" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ValidatingOrganisationTestSavedByPassingAllTheDatas status=SUCCESS method=OrganisationTests.ValidatingOrganisationTestSavedByPassingAllTheDatas()[pri:3, instance:testcase.OrganisationTests@2e48362c] output={null}]]]>
+                <![CDATA[[TestResult name=ValidatingOrganisationTestSavedByPassingAllTheDatas status=SUCCESS method=OrganisationTests.ValidatingOrganisationTestSavedByPassingAllTheDatas()[pri:3, instance:testcase.OrganisationTests@2fd953a6] output={null}]]]>
               </value>
             </param>
           </params>

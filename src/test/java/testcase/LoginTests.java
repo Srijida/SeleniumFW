@@ -14,7 +14,7 @@ import Pages.LoginPage;
 public class LoginTests extends BaseTest {
     LoginPage objLogin;
 
-    @Test(priority=1)
+    @Test(priority=1,enabled = true,retryAnalyzer=retry_analyzer.RetryAnalyzer.class)
     public void Valid_LoginTest() throws InterruptedException, IOException {
        
         ReadExcelData excelData = new ReadExcelData(constant.EXCEL_FILE_PATH, "LoginTest");
@@ -26,7 +26,7 @@ public class LoginTests extends BaseTest {
         Assert.assertTrue(objLogin.verifyWelcomeText(excelData.getCellData(1, 2)));
       
     }
-    @Test(priority=2)
+    @Test(priority=2,enabled = true,retryAnalyzer=retry_analyzer.RetryAnalyzer.class)
     public void Invalid_Username_Test() throws InterruptedException, IOException {
        
         ReadExcelData excelData = new ReadExcelData(constant.EXCEL_FILE_PATH, "LoginTest");
@@ -38,7 +38,7 @@ public class LoginTests extends BaseTest {
       
 
     }
-    @Test(priority=3)
+    @Test(priority=3,enabled = true,retryAnalyzer=retry_analyzer.RetryAnalyzer.class)
     public void Invalid_Password_Test() throws InterruptedException, IOException {
        
         ReadExcelData excelData = new ReadExcelData(constant.EXCEL_FILE_PATH, "LoginTest");
@@ -50,7 +50,7 @@ public class LoginTests extends BaseTest {
       
 
     }
-    @Test(priority=4)
+    @Test(priority=4,enabled = true,retryAnalyzer=retry_analyzer.RetryAnalyzer.class)
     public void Invalid_LoginTest() throws InterruptedException, IOException {
        
         ReadExcelData excelData = new ReadExcelData(constant.EXCEL_FILE_PATH, "LoginTest");

@@ -15,7 +15,7 @@ public class TicketsTest extends BaseTest{
 	LoginPage objLogin;
 	TicketPage objticket;
 	
- @Test(priority=1)
+ @Test(priority=1,retryAnalyzer=retry_analyzer.RetryAnalyzer.class)
 	    public void ValidatingTicketsIssuedToStaffIsSaved() throws InterruptedException, IOException {
 	        ReadExcelData excelData = new ReadExcelData(constant.EXCEL_FILE_PATH,"Tickets");
 	        performLogin(excelData.getCellData(1,0),excelData.getCellData(1,1));
