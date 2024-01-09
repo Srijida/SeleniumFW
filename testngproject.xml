@@ -8,17 +8,17 @@
         <parameter name="browser" value="chrome" />
         <parameter name="url" value="https://hrm.qabible.in/hrms/admin" />
     <classes>
-     <class name="testcase.StaffTest"/>
-      <class name="testcase.GoalTrackingTest"/>
+      <class name="testcase.StaffTest"/>
       <class name="testcase.SignoutTest"/>
+      <class name="testcase.TicketsTest"/>
+      <class name="testcase.TrainingTest"/>
       <class name="testcase.AttendanceTest"/>
+      <class name="testcase.AssetTests"/>
+      <class name="testcase.EmployeeTest"/>
       <class name="testcase.FileManagerTest"/>
       <class name="testcase.LoginTests"/>
       <class name="testcase.BaseTest"/>
       <class name="testcase.OrganisationTests"/>
-      <class name="testcase.TrainingTest"/>
-      <class name="testcase.AssetTests"/>
-      <class name="testcase.EmployeeTest"/>
       <class name="testcase.EmployeeDataTest"/>
     </classes>
   </test> <!-- Test -->
